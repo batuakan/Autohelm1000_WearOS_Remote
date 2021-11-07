@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_boxedEdges="all"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeBearing"
+        app:layout_constraintTop_toBottomOf="@+id/relativeBearing">
+
+        <TextView
+            android:id="@+id/relativeBearing"
+            android:layout_width="174dp"
+            android:layout_height="123dp"
+            android:layout_marginBottom="45dp"
+            android:lineSpacingExtra="0sp"
+            android:text="999"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="90sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/applyCorrection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="43dp"
+            android:text="Apply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeBearing" />
+
+        <TextView
+            android:id="@+id/mHeart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="♥"
+            android:textColor="#4CAF50"
+            tools:layout_editor_absoluteX="11dp" />
+
+        <TextView
+            android:id="@+id/mLeftArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="◄"
+            android:textColor="#FF0000"
+            android:textSize="34sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/mRightArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="►"
+            android:textColor="#00FF00"
+            android:textSize="34sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.wear.widget.BoxInsetLayout>
